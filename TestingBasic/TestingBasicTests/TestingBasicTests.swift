@@ -49,4 +49,36 @@ class TestingBasicTests: XCTestCase {
         XCTAssertEqual("Alfonso Miranda", viewController.nameLabel.text!)
         viewController.endAppearanceTransition()
     }
+    
+    func test_viewController_get_movie_isCalled() {
+        //GIVEN
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard
+            .instantiateViewController(withIdentifier: "viewController") as! ViewController
+        viewController.beginAppearanceTransition(true, animated: false)
+        //WHEN
+        let provider = MovieProviderMock()
+        viewController.movieProvider = provider
+        //THEN
+        viewController.viewDidLoad()
+        XCTAssert(provider.isGetMovieCalled)
+        viewController.endAppearanceTransition()
+    }
+    
+    func test_viewController_get_movie_when_is_success() {
+        //GIVEN
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard
+            .instantiateViewController(withIdentifier: "viewController") as! ViewController
+        viewController.beginAppearanceTransition(true, animated: false)
+        //WHEN
+        let provider = MovieProviderMock()
+        provider.successState = true
+        viewController.movieProvider = provider
+        //THEN
+        viewController.viewDidLoad()
+        XCTAssert(provider.isGetMovieCalled)
+        XCTAssert(viewController.titleMovieLabel.text == "Terminator 2")
+        viewController.endAppearanceTransition()
+    }
 }
