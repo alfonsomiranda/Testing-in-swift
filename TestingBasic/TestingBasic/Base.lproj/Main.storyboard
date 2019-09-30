@@ -41,6 +41,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bve-l8-I90">
+                                <rect key="frame" x="0.0" y="595" width="414" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3t-vD-Pnm">
+                                <rect key="frame" x="0.0" y="646" width="414" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -51,9 +65,11 @@
                     </view>
                     <connections>
                         <outlet property="composeButton" destination="004-gP-h2P" id="U6C-Lg-2Sk"/>
+                        <outlet property="descriptionMovieLabel" destination="y3t-vD-Pnm" id="HHb-B4-2aZ"/>
                         <outlet property="lastNmeTextField" destination="zfe-0b-A2n" id="aOv-M3-3ZW"/>
                         <outlet property="nameLabel" destination="kXN-Jc-16t" id="IfX-6P-yke"/>
                         <outlet property="nameTextField" destination="rnd-ma-Lr5" id="TyA-RT-5Qs"/>
+                        <outlet property="titleMovieLabel" destination="Bve-l8-I90" id="vqb-1Y-9Hz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

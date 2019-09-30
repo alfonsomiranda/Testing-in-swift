@@ -16,15 +16,26 @@ class ViewController: UIViewController {
       return label
     }()
     
+    var movieProvider: MovieProvider = MovieProviderImplementation()
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var composeButton: UIButton!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var lastNmeTextField: UITextField!
+    @IBOutlet weak var titleMovieLabel: UILabel!
+    @IBOutlet weak var descriptionMovieLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.nameLabel.text = "Alfonso"
+        
+        movieProvider.getMovie(success: { (movie) in
+            self.titleMovieLabel.text = movie.title
+            self.descriptionMovieLabel.text = movie.movieEntityDescription
+        }) { (error) in
+            
+        }
     }
     
     @IBAction func composeFullNameAction() {
