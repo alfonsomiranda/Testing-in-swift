@@ -3,7 +3,7 @@
 //  TestingBasic
 //
 //  Created by Alfonso Miranda Castro on 28/09/2019.
-//  Copyright © 2019 everis. All rights reserved.
+//  Copyright © 2019 alfonsomiranda. All rights reserved.
 //
 
 import UIKit

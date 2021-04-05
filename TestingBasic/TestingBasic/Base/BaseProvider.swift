@@ -3,7 +3,7 @@
 //  TestingBasic
 //
 //  Created by Alfonso Miranda Castro on 29/09/2019.
-//  Copyright © 2019 everis. All rights reserved.
+//  Copyright © 2019 alfonsomiranda. All rights reserved.
 //
 
 import Foundation
@@ -24,8 +24,11 @@ class BaseProvider {
                 return
             }
             do {
-                let response = try! JSONDecoder().decode(MovieEntity.self, from: responseData)
-                success(response as! T)
+                if let response = try? JSONDecoder().decode(T.self, from: responseData) {
+                    success(response)
+                } else {
+                    failure(EError(domain: "", code: -1, localizedDescription: ""))
+                }
             }
         })
         task.resume()

@@ -3,7 +3,7 @@
 //  TestingBasicTests
 //
 //  Created by Alfonso Miranda Castro on 28/09/2019.
-//  Copyright © 2019 everis. All rights reserved.
+//  Copyright © 2019 alfonsomiranda. All rights reserved.
 //
 
 import XCTest
@@ -50,21 +50,6 @@ class TestingBasicTests: XCTestCase {
         viewController.endAppearanceTransition()
     }
     
-    func test_viewController_get_movie_isCalled() {
-        //GIVEN
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard
-            .instantiateViewController(withIdentifier: "viewController") as! ViewController
-        viewController.beginAppearanceTransition(true, animated: false)
-        //WHEN
-        let provider = MovieProviderMock()
-        viewController.movieProvider = provider
-        //THEN
-        viewController.viewDidLoad()
-        XCTAssert(provider.isGetMovieCalled)
-        viewController.endAppearanceTransition()
-    }
-    
     func test_viewController_get_movie_when_is_success() {
         //GIVEN
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -75,8 +60,8 @@ class TestingBasicTests: XCTestCase {
         let provider = MovieProviderMock()
         provider.successState = true
         viewController.movieProvider = provider
+        viewController.getMovieButton.sendActions(for: .touchUpInside)
         //THEN
-        viewController.viewDidLoad()
         XCTAssert(provider.isGetMovieCalled)
         XCTAssert(viewController.titleMovieLabel.text == "Terminator 2")
         viewController.endAppearanceTransition()
