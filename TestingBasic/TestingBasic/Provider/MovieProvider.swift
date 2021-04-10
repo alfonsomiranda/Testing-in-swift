@@ -14,7 +14,7 @@ protocol MovieProvider {
 
 class MovieProviderImplementation: BaseProvider, MovieProvider {
     func getMovie(success: @escaping(MovieEntity) -> Void, failure: @escaping(EError) -> Void) {
-        request(entityClass: MovieEntity.self, endpoint: "http://demo8628160.mockable.io/movies", method: .get, success: { (entity) in
+        request(entityClass: MovieEntity.self, endpoint: "http://demo8628160.mockable.io/movie", method: .get, success: { (entity) in
             success(entity)
         }) { (error) in
             failure(error)
