@@ -66,4 +66,10 @@ class TestingBasicTests: XCTestCase {
         XCTAssert(viewController.titleMovieLabel.text == "Terminator 2")
         viewController.endAppearanceTransition()
     }
+    
+    func test_concatenate_two_strings() {
+        let viewController = ViewController()
+        
+        XCTAssertEqual(viewController.concatenate(first: "alfonso", second: "miranda"), "Alfonso Miranda")
+    }
 }

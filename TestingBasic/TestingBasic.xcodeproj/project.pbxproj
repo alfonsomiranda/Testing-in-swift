@@ -18,6 +18,8 @@
 		B37F96342341DFA400968514 /* MovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37F96332341DFA400968514 /* MovieEntity.swift */; };
 		B37F96362341DFEC00968514 /* MovieProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37F96352341DFEC00968514 /* MovieProvider.swift */; };
 		B37F9639234203BD00968514 /* MovieProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37F9638234203BD00968514 /* MovieProviderMock.swift */; };
+		F94010BF2624B8A200878F50 /* BaseProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94010BE2624B8A200878F50 /* BaseProviderMock.swift */; };
+		F94010C32624BBB600878F50 /* MovieProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94010C22624BBB600878F50 /* MovieProviderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		B37F96332341DFA400968514 /* MovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEntity.swift; sourceTree = "<group>"; };
 		B37F96352341DFEC00968514 /* MovieProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieProvider.swift; sourceTree = "<group>"; };
 		B37F9638234203BD00968514 /* MovieProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieProviderMock.swift; sourceTree = "<group>"; };
+		F94010BE2624B8A200878F50 /* BaseProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProviderMock.swift; sourceTree = "<group>"; };
+		F94010C22624BBB600878F50 /* MovieProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieProviderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 			children = (
 				B37F9637234203AA00968514 /* Mock */,
 				B37F961F233FD4E800968514 /* TestingBasicTests.swift */,
+				F94010C22624BBB600878F50 /* MovieProviderTests.swift */,
 				B37F9621233FD4E900968514 /* Info.plist */,
 			);
 			path = TestingBasicTests;
@@ -139,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				B37F9638234203BD00968514 /* MovieProviderMock.swift */,
+				F94010BE2624B8A200878F50 /* BaseProviderMock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -257,6 +263,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F94010BF2624B8A200878F50 /* BaseProviderMock.swift in Sources */,
+				F94010C32624BBB600878F50 /* MovieProviderTests.swift in Sources */,
 				B37F9620233FD4E800968514 /* TestingBasicTests.swift in Sources */,
 				B37F9639234203BD00968514 /* MovieProviderMock.swift in Sources */,
 			);

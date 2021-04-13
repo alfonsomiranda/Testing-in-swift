@@ -9,7 +9,12 @@
 import Foundation
 
 
-class BaseProvider {
+protocol ProviderProtocol {
+    func request<T: Decodable>(entityClass: T.Type, endpoint: String, method: HTTPMethod, success: @escaping(_ entity: T) -> Void, failure: @escaping(EError) -> Void)
+}
+
+
+class Provider: ProviderProtocol {
     func request<T: Decodable>(entityClass: T.Type, endpoint: String, method: HTTPMethod, success: @escaping(_ entity: T) -> Void, failure: @escaping(EError) -> Void) {
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: .main)
         let url = URL(string: endpoint)!

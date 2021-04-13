@@ -46,5 +46,9 @@ class ViewController: UIViewController {
             debugPrint("Error")
         }
     }
+    
+    func concatenate(first: String, second: String) -> String {
+        return first.capitalized + " " + second.capitalized
+    }
 }
 
